@@ -1,2 +1,2 @@
 # haru-video-importer
-Video Importer plugins for HaruTheme Products
+Video Importer plugin for HaruTheme Products customize from Meks Video Importer plugin
