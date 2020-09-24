@@ -294,8 +294,8 @@ if (!class_exists('Meks_Video_Importer_Import')):
             }
 
             if ( $editor == 'classic' ) {
-
-                $content = $video_url;
+		// Remove video URL in content
+                // $content = $video_url;
                 
                 if (!empty( $description ) ) {
                     $content = $content . PHP_EOL . PHP_EOL . wpautop($description);
