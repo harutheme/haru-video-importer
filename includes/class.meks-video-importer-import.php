@@ -303,12 +303,12 @@ if (!class_exists('Meks_Video_Importer_Import')):
 
             } else {
                
-                $content = '
-                <!-- wp:core-embed/'. $provider .' {"url":"'.$video_url.'","type":"video","providerNameSlug":"'. $provider .'","className":""} -->
-                <figure class="wp-block-embed-'. $provider .' wp-block-embed is-type-video is-provider-'. $provider .'"><div class="wp-block-embed__wrapper"> 
-                '.$video_url.'
-                </div></figure>
-                <!-- /wp:core-embed/'. $provider .' -->';
+//                 $content = '
+//                 <!-- wp:core-embed/'. $provider .' {"url":"'.$video_url.'","type":"video","providerNameSlug":"'. $provider .'","className":""} -->
+//                 <figure class="wp-block-embed-'. $provider .' wp-block-embed is-type-video is-provider-'. $provider .'"><div class="wp-block-embed__wrapper"> 
+//                 '.$video_url.'
+//                 </div></figure>
+//                 <!-- /wp:core-embed/'. $provider .' -->';
 
                 if ( !empty( $description) ) {
                     $content .= '<!-- wp:paragraph -->' . nl2br($description, true) . '<!-- /wp:paragraph -->';
