@@ -224,6 +224,11 @@ if (!class_exists('Meks_Video_Importer_Import')):
 
             // Set featured image
             if (!empty($_POST['mvi-video-image_max'])){
+                // HaruTheme Customize: New API image not have ext
+                if ( $_POST['provider'] == 'vimeo' ) {
+                    $this->set_featured_image($_POST['mvi-video-image_max'] . '.jpeg', $post_id);
+                }
+
                 $this->set_featured_image($_POST['mvi-video-image_max'], $post_id);
             }
 
