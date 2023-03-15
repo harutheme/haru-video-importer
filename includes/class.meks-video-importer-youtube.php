@@ -327,7 +327,6 @@ if (!class_exists('Meks_Video_Importer_Youtube')):
                     $url = $this->build_url(array(
                         'channelId' => $args['id'],
                     ), $append_query);
-
                     break;
                 case "userId":
                     $channelId = $this->get_channel_by_user_id($args['id']);
@@ -368,7 +367,7 @@ if (!class_exists('Meks_Video_Importer_Youtube')):
             if(!isset($video->items[0]->snippet)){
                 return false;
             }
-
+            
             // return $video->items[0]->snippet;
             // HaruTheme Customize
             $return = array();
@@ -377,6 +376,7 @@ if (!class_exists('Meks_Video_Importer_Youtube')):
             $return['statistics'] = $video->items[0]->statistics;
 
             return $return;
+            
         }
 
         /**

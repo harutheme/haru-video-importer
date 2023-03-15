@@ -299,8 +299,8 @@ if (!class_exists('Meks_Video_Importer_Import')):
             }
 
             if ( $editor == 'classic' ) {
-		// Remove video URL in content
-                // $content = $video_url;
+
+                // $content = $video_url; // HaruTheme Customize
                 
                 if (!empty( $description ) ) {
                     $content = $content . PHP_EOL . PHP_EOL . wpautop($description);
@@ -308,12 +308,8 @@ if (!class_exists('Meks_Video_Importer_Import')):
 
             } else {
                
-//                 $content = '
-//                 <!-- wp:core-embed/'. $provider .' {"url":"'.$video_url.'","type":"video","providerNameSlug":"'. $provider .'","className":""} -->
-//                 <figure class="wp-block-embed-'. $provider .' wp-block-embed is-type-video is-provider-'. $provider .'"><div class="wp-block-embed__wrapper"> 
-//                 '.$video_url.'
-//                 </div></figure>
-//                 <!-- /wp:core-embed/'. $provider .' -->';
+                // HaruTheme Customize
+                $content = '';
 
                 if ( !empty( $description) ) {
                     $content .= '<!-- wp:paragraph -->' . nl2br($description, true) . '<!-- /wp:paragraph -->';

@@ -395,3 +395,82 @@ if(!function_exists('meks_video_importer_is_plugins_page')):
 		return false;
     }
 endif;
+
+
+/**
+ * Upsell Meks themes with notice info
+ *
+ * @return void
+ */
+add_action( 'admin_notices', 'meks_admin_notice__info' );
+
+if ( ! function_exists( 'meks_admin_notice__info' ) ) :
+
+	function meks_admin_notice__info() {
+
+		$meks_themes  = array( 'shamrock', 'awsm', 'safarica', 'seashell', 'sidewalk', 'throne', 'voice', 'herald', 'vlog', 'gridlove', 'pinhole', 'typology', 'trawell', 'opinion', 'johannes', 'megaphone', 'toucan', 'roogan' );
+		$active_theme = get_option( 'template' );
+
+
+		if ( ! in_array( $active_theme, $meks_themes ) ) {
+
+			if ( get_option('has_transient') == 0 ) {
+				set_transient( 'meks_admin_notice_time_'. get_current_user_id() , true, WEEK_IN_SECONDS );
+				update_option('has_transient', 1);
+				update_option('track_transient', 1);
+			}
+			
+			if (  !get_option('meks_admin_notice_info') || ( get_option('track_transient') && !get_transient( 'meks_admin_notice_time_'. get_current_user_id() ) ) ) {
+
+				$all_themes = wp_get_themes();
+
+				?>
+				<div class="meks-notice notice notice-info is-dismissible">
+					<p>
+                        <?php
+							echo sprintf( __( 'You are currently using %1$s theme. Did you know that Meks plugins give you more features and flexibility with one of our <a href="%2$s">Meks themes</a>?', MEKS_VIDEO_IMPORTER_PAGE_SLUG ), $all_themes[ $active_theme ], 'https://1.envato.market/4DE2o' );
+						?>
+					</p>
+				</div>
+				<?php
+
+			}
+		} else {
+			delete_option('meks_admin_notice_info');
+			delete_option('has_transient');
+			delete_option('track_transient');
+		}
+	}
+
+endif;
+
+
+/**
+ * Colose/remove info notice with ajax
+ *
+ * @return void
+ */
+add_action( 'wp_ajax_meks_remove_notification', 'meks_remove_notification' );
+add_action( 'wp_ajax_nopriv_meks_remove_notification', 'meks_remove_notification' );
+
+if ( !function_exists( 'meks_remove_notification' ) ) :
+	function meks_remove_notification() {
+		add_option('meks_admin_notice_info', 1);
+		if ( !get_transient( 'meks_admin_notice_time_'. get_current_user_id() ) ) {
+			update_option('track_transient', 0);
+		}
+	}
+endif;
+
+/**
+ * Add admin scripts
+ *
+ * @return void
+ */
+add_action( 'admin_enqueue_scripts', 'meks_video_importer_enqueue_admin_scripts' );
+
+if ( !function_exists( 'meks_video_importer_enqueue_admin_scripts' ) ) :
+	function meks_video_importer_enqueue_admin_scripts() {
+        wp_enqueue_script( 'meks-video-importer-ajax', MEKS_VIDEO_IMPORTER_URL . 'assets/js/admin.js', array('jquery'), MEKS_VIDEO_IMPORTER_VERSION );
+	}
+endif;

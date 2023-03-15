@@ -58,7 +58,7 @@ if ( !class_exists( 'Meks_Video_Importer_Options_Page' ) ):
      * @since    1.0.0
      */
     public function add_video_importer_page() {
-        add_management_page( esc_html__( 'Haru Video Importer', 'meks-video-importer' ), esc_html__( 'Haru Video Importer', 'meks-video-importer' ), 'manage_options', MEKS_VIDEO_IMPORTER_PAGE_SLUG, array( $this, 'print_page' ) );
+        add_management_page( esc_html__( 'Haru Filmmaker Importer', 'meks-video-importer' ), esc_html__( 'Haru Filmmaker Importer', 'meks-video-importer' ), 'manage_options', MEKS_VIDEO_IMPORTER_PAGE_SLUG, array( $this, 'print_page' ) ); // HaruTheme Customize
     }
 
     /**
