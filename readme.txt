@@ -1,5 +1,5 @@
-=== Haru Filmmaker Importer ===
-Contributors: harutheme, aleksandargubecka
+=== Haru Video Importer ===
+Contributors: harutheme
 Donate link: https://harutheme.com
 Tags: youtube, vimeo, video, import, bulk, videos, importer, channel, playlist, user
 Requires at least: 3.7
@@ -12,13 +12,13 @@ Easily import YouTube and Vimeo videos in bulk to your posts, pages or any custo
 
 == Description ==
 
-Haru Filmmaker Importer was originally created as a feature for our [Vidio WordPress theme](https://harutheme.com/) but now it can be used on any WordPress website.
+Haru Video Importer was originally created as a feature for our [Vidio WordPress theme](https://harutheme.com/) but now it can be used on any WordPress website.
 
-With Haru Filmmaker Importer WordPress plugin you can easily import YoutTube or Vimeo videos in bulk to your posts, pages or any custom post type registered on your website. The plugin is highly configurable and provides you with various options for fetching videos. Whether you want to pull videos from a channel, a playlist, or a specific user and even search query, we got you covered. 
+With Haru Video Importer WordPress plugin you can easily import YoutTube or Vimeo videos in bulk to your posts, pages or any custom post type registered on your website. The plugin is highly configurable and provides you with various options for fetching videos. Whether you want to pull videos from a channel, a playlist, or a specific user and even search query, we got you covered. 
 
 Also, there are several smart options related to the import process itself. Choose a post type, post status, automatically add video description into post content, assign categories, tags or any custom taxonomies while importing the videos.
 
-Video Importer WordPress plugin is created by [Meks](https://harutheme.com)
+Video Importer WordPress plugin is created by [Haru](https://harutheme.com)
 
 == Features ==
 
@@ -36,9 +36,9 @@ Video Importer WordPress plugin is created by [Meks](https://harutheme.com)
 
 == Installation ==
 
-1. Upload meks-video-import.zip to plugins via WordPress admin panel or upload unzipped folder to your wp-content/plugins/ folder
+1. Upload haru-video-importer.zip to plugins via WordPress admin panel or upload unzipped folder to your wp-content/plugins/ folder
 2. Activate the plugin through the "Plugins" menu in WordPress
-3. In Admin panel, go to Tools -> Haru Filmmaker Importer to manage the options and import videos
+3. In Admin panel, go to Tools -> Haru Video Importer to manage the options and import videos
 
 == Frequently Asked Questions ==
 
@@ -52,7 +52,7 @@ For any questions, error reports and suggestions please visit https://harutheme.
 
 = 1.0.9 =
 
-* Added: Notification for meks plugins
+* Added: Notification for haru plugins
 
 = 1.0.8 =
 
