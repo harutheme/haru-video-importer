@@ -1,6 +1,6 @@
 === Haru Filmmaker Importer ===
-Contributors: mekshq, aleksandargubecka
-Donate link: https://mekshq.com
+Contributors: harutheme, aleksandargubecka
+Donate link: https://harutheme.com
 Tags: youtube, vimeo, video, import, bulk, videos, importer, channel, playlist, user
 Requires at least: 3.7
 Tested up to: 6.1
@@ -12,13 +12,13 @@ Easily import YouTube and Vimeo videos in bulk to your posts, pages or any custo
 
 == Description ==
 
-Haru Filmmaker Importer was originally created as a feature for our [Vlog WordPress theme](https://mekshq.com/theme/vlog/) but now it can be used on any WordPress website.
+Haru Filmmaker Importer was originally created as a feature for our [Vidio WordPress theme](https://harutheme.com/) but now it can be used on any WordPress website.
 
 With Haru Filmmaker Importer WordPress plugin you can easily import YoutTube or Vimeo videos in bulk to your posts, pages or any custom post type registered on your website. The plugin is highly configurable and provides you with various options for fetching videos. Whether you want to pull videos from a channel, a playlist, or a specific user and even search query, we got you covered. 
 
 Also, there are several smart options related to the import process itself. Choose a post type, post status, automatically add video description into post content, assign categories, tags or any custom taxonomies while importing the videos.
 
-Video Importer WordPress plugin is created by [Meks](https://mekshq.com)
+Video Importer WordPress plugin is created by [Meks](https://harutheme.com)
 
 == Features ==
 
@@ -42,7 +42,7 @@ Video Importer WordPress plugin is created by [Meks](https://mekshq.com)
 
 == Frequently Asked Questions ==
 
-For any questions, error reports and suggestions please visit https://mekshq.com/contact/
+For any questions, error reports and suggestions please visit https://harutheme.com/contact/
 
 == Changelog ==
 
